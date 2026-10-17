@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Recovery Optimizer - Dark Industrial Theme & Glassmorphism Stylesheet
+   Palette:
+     Background: #0b0f19 (Charcoal / Deep Navy)
+     Cards: rgba(19, 27, 46, 0.72)
+     Border: rgba(217, 119, 54, 0.22)
+     Accent / Copper: #d97736 (Copper Orange)
+     Accent Glow: rgba(217, 119, 54, 0.45)
+     Good / Teal: #14b8a6 (Teal)
+     Alert / Red: #ef4444 (Crimson)
+     Text Primary: #f1f5f9
+     Text Muted: #94a3b8
+   ========================================================================== */
+
+/* Global Typography & Font Stacks */
+html, body, [class*="css"] {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #f1f5f9;
+}
+
+/* Hide Streamlit default hamburger menu and footer */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header[data-testid="stHeader"] {background: transparent;}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(19, 27, 46, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(217, 119, 54, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(217, 119, 54, 0.65);
+    box-shadow: 0 12px 30px -4px rgba(217, 119, 54, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Hero Badge */
+.badge-synthetic-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(217, 119, 54, 0.15);
+    border: 1px solid rgba(217, 119, 54, 0.4);
+    color: #fba76a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 8px;
+}
+
+/* Plain Language "What this means" callout box */
+.meaning-box {
+    background: rgba(20, 184, 166, 0.08);
+    border-left: 4px solid #14b8a6;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.meaning-box b {
+    color: #2dd4bf;
+}
+
+/* "What this shows" Subtitle */
+.page-subtitle {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    border-left: 3px solid #d97736;
+    padding-left: 12px;
+    margin: 6px 0 20px 0;
+    font-weight: 400;
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+    background-color: #0d1322 !important;
+    border-right: 1px solid rgba(217, 119, 54, 0.18);
+}
+
+section[data-testid="stSidebar"] .stRadio label {
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] > label:hover {
+    background: rgba(217, 119, 54, 0.12);
+    color: #d97736 !important;
+}
+
+/* Smooth Page Fade-In */
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main .block-container {
+    animation: pageFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+/* Reduced animations accessibility override */
+body.reduced-motion *,
+.reduced-motion * {
+    animation: none !important;
+    transition: none !important;
+}

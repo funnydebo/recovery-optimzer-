@@ -1,0 +1,11 @@
+# Recovery Optimizer - Core Dependencies
+pandas>=2.2.0
+numpy>=1.26.0
+scipy>=1.13.0
+statsmodels>=0.14.0
+pyDOE3>=1.6.0
+simpy>=4.1.0
+pulp>=2.8.0
+plotly>=5.20.0
+streamlit>=1.35.0
+pytest>=8.0.0
